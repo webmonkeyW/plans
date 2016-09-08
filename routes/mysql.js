@@ -5,7 +5,6 @@ exports.linkMysql = function(dataname) {
         host: 'localhost',
         user: 'root',
         //password : 'nodejs',
-        password: 'KOtXA2i7',
         database: dataname
     });
     connection.connect();
