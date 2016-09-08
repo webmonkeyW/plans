@@ -1,0 +1,12 @@
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #0192df !important;
+}
+.springBox {
+    display: box;
+    display: -webkit-box;
+    box-orient: horizontal;
+}
+.levelBox1 {
+    box-flex: 1;
+    -webkit-box-flex: 1;
+}

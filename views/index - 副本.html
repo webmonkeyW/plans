@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta id='viewEle' name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!--
+    <meta id='viewEle' name="viewport" content="width=640,user-scalable=no,target-densitydpi = device-dpi " />
+    -->
+    <title></title>
+    <script src="utils/js/device.min.js"></script>
+    <script>
+    //pc检测
+    //if(!device.mobile()){window.location.href='http://www.cui2.com/h5/000/tips.html';}
+    </script>
+    <link rel="stylesheet" href="utils/other/assets/animate.min.css">
+    <link href="utils/css/jquery.mCustomScrollbar.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/bw1.css" rel="stylesheet" />
+    <script src="utils/js/jquery-2.1.1.min.js"></script>
+    <script src="utils/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="utils/js/jquery.mousewheel.min.js"></script>
+    <script src="utils/js/jquery.mCustomScrollbar.min.js"></script>
+    <!-- 
+        滚动条插件
+        API：http://manos.malihu.gr/page-scroll-to-id/
+        $(obj).mCustomScrollbar({
+            callbacks:{//回调
+                onCreate:function() {
+                
+                }
+            }
+        });
+    -->
+    <script src="utils/js/preventoverscroll.js"></script>
+    <script src="utils/js/hammer.min.js"></script>
+    <!--
+        alert 插件
+        调用方式 ： //swal("!", "姓名和电话不能为空", "error");
+    -->
+    <script src="utils/other/sweet-alert/sweet-alert.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="utils/other/sweet-alert/sweet-alert.css" />
+    <link rel="stylesheet/less" type="text/css" href="css/styles.less">
+    <script src="utils/js/less.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="utils/css/loaders.css">
+</head>
+
+<body>
+    <!--分享图标-->
+    <img id="WXFX" src="images/300.jpg" style="position:absolute;top:-9999px;" />
+    <!--主体部分-->
+    <!--header-->
+    <div class="topBox abso" id="topBox">
+        <img class="lazy abso toplogo anim_linear delay_5 threeD" data-pic="images/img1/toplogo.png" alt="">
+        <img class="lazy abso myCenter anim_linear delay_5 threeD" id="myCenter" data-pic="images/img1/myinfobtn.png" alt="">
+        <span class="abso title anim_linear threeD">通讯录</span>
+        <div id="header_menu_btn" class="abso anim_linear menu_btn header_menu_btn threeD" openB='false'>
+            <span class="abso threeD anim_linear duration_6 line line1"></span>
+            <span class="abso threeD anim_linear duration_6 line line2"></span>
+            <span class="abso threeD anim_linear duration_6 line line3"></span>
+        </div>
+        <div class="menu_nr header_menu_nr" id='header_menu_nr'>
+            <div class="mask3 abso"></div>
+            <div class="abso bj"></div>
+            <input type="text" id="adminPassword" class="lazy adminPassword abso anim delay_15 threeD" data-pic="images/img1/pswbg.png" placeholder="请输入管理员密码">
+            <button class="lazy adminPasswordSubmit abso anim delay_26 threeD" id="adminPasswordSubmit" data-pic="images/img1/loginbtn.png"></button>
+            <div class="abso text" id="listBox">
+                <ul class="list" id="classify">
+                    <li class="rela threeD anim_back delay_1 anim_reL_100">
+                        <a href="#" data-classN="board">董事会
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_2 anim_reL_100">
+                        <a href="#" data-classN="senior">高管
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_3 anim_reL_100">
+                        <a href="#" data-classN="deputy">董办
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_4 anim_reL_100">
+                        <a href="#" data-classN="administrative">行政部
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_5 anim_reL_100">
+                        <a href="#" data-classN="finance">财务部
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_6 anim_reL_100">
+                        <a href="#" data-classN="housing">房产部
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_7 anim_reL_100">
+                        <a href="#" data-classN="DigitalMarketing">数字营销
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_8 anim_reL_100">
+                        <a href="#" data-classN="bigClient">大客户部
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_9 anim_reL_100">
+                        <a href="#" data-classN="loveDriving">爱自游部
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_10 anim_reL_100">
+                        <a href="#" data-classN="carBrand">汽车品牌
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                    <li class="rela threeD anim_back delay_11 anim_reL_100">
+                        <a href="#" data-classN="originality">创意中心
+                                <span class="abso jt">
+                                    <i class="abso i1"></i>
+                                    <i class="abso i2"></i>
+                                </span>
+                            </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="boxSizing" placeholder="请输入想查找的名字" id="seekT" type="text" />
+                <button id="seekBtn"></button>
+            </div>
+        </div>
+    </div>
+    <div class="content" id="content">
+        <div class="page page0 lazy" data-pic="images/img1/bg.jpg">
+            <img src="images/img1/loadingq1.png" class="loadq1 anim abso threeD">
+            <img src="images/img1/loadingq2.png" class="loadq2 anim abso threeD">
+            <img src="images/img1/loadingbb.png" class="loadingbb anim abso threeD">
+            <span class="LoadingNumb abso" id="planNumb"></span>
+        </div>
+        <div class="page page1 lazy" data-pic="images/img1/bg.jpg">
+            <img class="lazy logo abso anim animated swing threeD" data-pic="images/img1/logo.png">
+            <input type="text" id="Uname" class="lazy userName abso anim delay_20 threeD" data-pic="images/img1/namebg.png" placeholder="请输入您的姓名">
+            <input type="text" id="Ubranch" disabled="disabled" class="lazy branch abso anim delay_22 threeD" data-pic="images/img1/branchbg.png" placeholder="请选择您的部门">
+            <select name="" id="branchS" class="lazy branchSelect abso anim threeD">
+                <option value="">请选择</option>
+                <option value="董事会">董事会</option>
+                <option value="高管">高管</option>
+                <option value="董办">董办</option>
+                <option value="行政部">行政部</option>
+                <option value="财务部">财务部</option>
+                <option value="技术部">技术部</option>
+                <option value="数字营销">数字营销</option>
+                <option value="创意中心">创意中心</option>
+            </select>
+            <input type="text" id="Utelephone" class="lazy phone abso anim delay_24 threeD" data-pic="images/img1/phonebg.png" placeholder="请输入您的号码">
+            <input type="text" id="Upassword" class="lazy password abso anim delay_24 threeD" data-pic="images/img1/pswbg.png" placeholder="请输入部门密码">
+            <button class="lazy loginbtn abso anim delay_26 threeD" id="submit" data-pic="images/img1/loginbtn.png"></button>
+        </div>
+        <div class="page page2">
+            <div class="springBox phoneTitle anim_linear delay_9 abso">
+                <div class="levelBox1 titleBox border-right border-siold">姓名</div>
+                <div class="levelBox1 titleBox">部门</div>
+                <div class="levelBox1 titleBox border-left border-siold">电话</div>
+            </div>
+            <div class="phoneListBox anim_linear delay_9" id="phoneListBox">
+                <ul class="phoneList" id="all">
+                    <!-- <li class="springBox">
+                        <i class="abso iconDown"></i>
+                        <div class="levelBox1 name" data-id="9">王仁</div>
+                        <div class="levelBox1 section">数字营销</div>
+                        <div class="levelBox1 phone">
+                            <a href="tel:18684767623"></a>18684767623
+                        </div>
+                    </li> -->
+                </ul>
+                <ul class="phoneList" id="seekResult"></ul>
+            </div>
+            <div class="MyCenterPopup">
+                <div class="mask"></div>
+                <button class="close abso" id="myClose"></button>
+                <div class="abso myCenterInfo">
+                    <div class="abso PopuptopImg" style="background-image:url(images/img1/topimgtemp.jpg)"></div>
+                    <p class="abso name">王仁</p>
+                    <div class="infoBox">
+                        <p class="infoText">
+                            <span class="infoTitle">部门：</span>
+                            <span class="infoVal infoBranch"></span>
+                        </p>
+                        <p class="infoText">
+                            <span class="infoTitle">职务：</span>
+                            <span class="infoVal infoDuty"></span>
+                        </p>
+                        <p class="infoText">
+                            <span class="infoTitle">手机：</span>
+                            <span class="infoVal infoPhone"></span>
+                        </p>
+                        <p class="infoText">
+                            <span class="infoTitle infoEnglish">Q  Q：</span>
+                            <span class="infoVal infoQQ"></span>
+                        </p>
+                        <p class="infoText">
+                            <span class="infoTitle">邮箱：</span>
+                            <span class="infoVal infoMailbox"></span>
+                        </p>
+                        <p class="infoText">
+                            <span class="infoTitle">短码：</span>
+                            <span class="infoVal infoShortC"></span>
+                        </p>
+                        <p class="infoText">
+                            <span class="infoTitle">座机：</span>
+                            <span class="infoVal infoPlane"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page page3">
+            <div class="SetMyCenterTop">
+                <span class="longX abso"></span>
+                <span class="back abso" id="backAndConfirm"></span> 个人中心
+            </div>
+            <div class="abso setInfo" id="setInfoBox">
+                <ul class="SetList">
+                    <li class="clear topImgLi">
+                        <span class="left label">头像</span>
+                        <span class="right topimg" id="chooseImage"></span>
+                        <!-- <i class="toright abso"></i>-->
+                    </li>
+                    <li class="clear">
+                        <span class="left label">姓名</span>
+                        <span class="right labelVal labelName"></span>
+                        <input type="text" class="inputVal">
+                        <i class="toright abso"></i>
+                    </li>
+                    <li class="clear">
+                        <span class="left label">部门</span>
+                        <span class="right labelVal labelBranch"></span>
+                        <input type="text" class="inputVal">
+                        <i class="toright abso"></i>
+                    </li>
+                    <li class="clear">
+                        <span class="left label">职务</span>
+                        <span class="right labelVal labelJob"></span>
+                        <input type="text" class="inputVal">
+                        <i class="toright abso"></i>
+                    </li>
+                    <li class="clear">
+                        <span class="left label">电话</span>
+                        <span class="right labelVal labelPhone"></span>
+                        <input type="text" class="inputVal">
+                        <i class="toright abso"></i>
+                    </li>
+                    <li class="clear">
+                        <span class="left label">Q Q</span>
+                        <span class="right labelVal labelQQ"></span>
+                        <input type="text" class="inputVal">
+                        <i class="toright abso"></i>
+                    </li>
+                    <li class="clear">
+                        <span class="left label">邮箱</span>
+                        <span class="right labelVal labelEmail"></span>
+                        <input type="text" class="inputVal">
+                        <i class="toright abso"></i>
+                    </li>
+                    <li class="clear">
+                        <span class="left label">短码</span>
+                        <span class="right labelVal labelShort"></span>
+                        <input type="text" class="inputVal">
+                        <i class="toright abso"></i>
+                    </li>
+                    <li class="clear">
+                        <span class="left label">座机</span>
+                        <span class="right labelVal labelPlane"></span>
+                        <input type="text" class="inputVal">
+                        <i class="toright abso"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page page4">
+            <script src="utils/other/mobiscroll/js/mobiscroll.core.js"></script>
+            <script src="utils/other/mobiscroll/js/mobiscroll.frame.js"></script>
+            <script src="utils/other/mobiscroll/js/mobiscroll.scroller.js"></script>
+            <script src="utils/other/mobiscroll/js/mobiscroll.util.datetime.js"></script>
+            <script src="utils/other/mobiscroll/js/mobiscroll.datetimebase.js"></script>
+            <script src="utils/other/mobiscroll/js/mobiscroll.datetime.js"></script>
+            <script src="utils/other/mobiscroll/js/mobiscroll.select.js"></script>
+            <script src="utils/other/mobiscroll/js/mobiscroll.frame.ios.js"></script>
+            <script src="utils/other/mobiscroll/js/i18n/mobiscroll.i18n.zh.js"></script>
+            <link rel="stylesheet" type="text/css" href="utils/other/mobiscroll/css/mobiscroll.frame.css">
+            <link rel="stylesheet" type="text/css" href="utils/other/mobiscroll/css/mobiscroll.frame.ios.css">
+            <link rel="stylesheet" type="text/css" href="utils/other/mobiscroll/css/mobiscroll.scroller.css">
+            <link rel="stylesheet" type="text/css" href="utils/other/mobiscroll/css/mobiscroll.scroller.ios.css">
+            <div class="funbox submitPlan show">
+                <div id="planTextareaBox">
+                    <div id="plantextarea" class="plantextarea" contenteditable="true" style="-webkit-user-select: auto"></div>
+                </div>
+                <button id="subPlanBtn" class="subPlanBtn lazy" data-pic="images/img1/subplanbtn.png"></button>
+            </div>
+            <div class="funbox lookPlan ">
+                <div class="planListBox myPlan show">
+                    <div class="springBox planListTitle anim_linear delay_3">
+                        <div class="levelBox1 titleBox">时间</div>
+                        <div class="levelBox1 titleBox border-left border-siold">工作计划</div>
+                    </div>
+                    <div class="planListScroll anim_linear delay_9" id="planListScroll">
+                        <ul class="planList" id="myPlanList">
+                            <!-- <li class="springBox">
+                                <div class="levelBox1 date">
+                                    2016-08-26
+                                </div>
+                                <div class="levelBox1 plantextBox" data-id="9">
+                                    <div class="plantext">工作计划工作计划工作计划工作计划工作计划</div>
+                                    <i class="abso iconDown"></i>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="planListBox demandPlan ">
+                    <div class="springBox planListTitle anim_linear delay_3">
+                        <div class="levelBox1 titleBox border-right border-siold">姓名</div>
+                        <div class="levelBox1 titleBox">部门</div>
+                        <div class="levelBox1 titleBox">时间</div>
+                        <div class="levelBox1 titleBox border-left border-siold">工作计划</div>
+                    </div>
+                    <div class="planListScroll anim_linear delay_9" id="demandPlanListScroll">
+                        <ul class="planList" id="demandPlanList">
+                            <!-- <li class="springBox">
+                                <div class="levelBox1 name">王仁</div>
+                                <div class="levelBox1 section">数字营销</div>
+                                <div class="levelBox1 date">
+                                    2016-08-26
+                                </div>
+                                <div class="levelBox1 plantextBox" data-id="9">
+                                    <div class="plantext">工作计划工作计划工作计划</div>
+                                    <i class="abso iconDown"></i>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="dateTime anim_linear delay_9">
+                    <span>请选择日期：</span>
+                    <input type="" class="timeInput" id="timeInput">
+                    <button id="ck_look" class="look">查看</button>
+                </div>
+            </div>
+            <div class="myPlanPopup">
+                <div class="mask"></div>
+                <button class="close abso" id="myPlanClose"></button>
+                <div class="abso myPlantextbox">
+                    <!-- <div class="abso PopuptopImg" style="background-image:url(images/img1/topimgtemp.jpg)"></div> -->
+                    <!-- <p class="abso name">王仁</p> -->
+                    <div class="myPlanPopupTextBox" id="myPlanPopupTextBox">
+                        <p class="plantext_P"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page page5"></div>
+        <div class="page page6"></div>
+        <div class="page page7"></div>
+    </div>
+    <!--end 主体部分-->
+    <!--向上滑动的箭头提示-->
+    <div class="footer anim_linear delay_9 menu springBox" id="menu">
+        <div class="levelBox1" id="phone_book" data-menu="1">通讯录</div>
+        <div class="levelBox1" id="work_plan" data-menu="2">工作计划</div>
+    </div>
+    <img class="pt-page-moveIconUp dn" id='upJt' src="images/icon_up.png">
+    <!--分享提示-->
+    <div id="fx">
+        <img class='fx_text' src="images/fx_text.png" />
+    </div>
+    <div class="micBtn" id="micBtn"></div>
+    <!--加载数据时的友好提示-->
+    <div class="wait">
+        <div class="mask"></div>
+        <img src="utils/images/loading1.gif" class="loading1 abso">
+        <p class="waitHint abso"></p>
+    </div>
+</body>
+
+</html>
+<!--页面切换动画-->
+<script src="js/public.js"></script>
+<script src="js/bw1.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<!-- <script src="http://bw30v.com/CI2/jssdk.js" charset="utf-8"></script> -->
+<script>
+//less.watch();
+var list = ['content'];
+var preventOverScroll = new window.PreventOverScroll({
+    list: list
+});
+/*$(function(){
+    var wx={
+        title:'北纬文旅内部通讯录,可收藏使用,只允许内部分享,谢谢配合!',
+        desc:'北纬文旅内部通讯录,可收藏使用,只允许内部分享,谢谢配合!',
+        imgUrl:'http://bw30v.com/bw_txl_20160524/images/300.jpg',
+        link:'http://bw30v.com/bw_txl_20160524/index.php',
+        success:function(){
+            swal('重要的事情说三遍,请勿向外分享！','','warning');
+        }
+    }
+    jssdk.init({debug:false}).done(function(){
+       jssdk.share(wx);
+    });
+})*/
+var sdata = {
+    title: '北纬文旅内部通讯录,可收藏使用,只允许内部分享,谢谢配合!',
+    desc: '北纬文旅内部通讯录,可收藏使用,只允许内部分享,谢谢配合!',
+    link: 'http://node.bw30v.com/plan',
+    imgUrl: 'http://bw30v.com/bw_txl_20160524/images/300.jpg',
+};
+
+$.post('http://node.bw30v.com/signs/getsignature', {
+    url: location.href.split('#')[0]
+}, function(data) {
+    console.log(data);
+    console.log(data.appId);
+    wx.config({
+        appId: data.appId,
+        debug: false,
+        timestamp: data.timestamp,
+        nonceStr: data.nonceStr,
+        signature: data.signature,
+        jsApiList: [
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo',
+            'chooseImage'
+        ]
+    });
+    // 调用微信API
+    wx.ready(function() {
+        wx.onMenuShareTimeline(sdata);
+        wx.onMenuShareAppMessage(sdata);
+    });
+});
+</script>
