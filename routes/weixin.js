@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 var OAuth = require('wechat-oauth');
 // 微信授权和回调
-var client = new OAuth('wx32022f2eae215126', '5acb8930612d71544460ab80569d2adb');
-var domain = 'node.bw30v.com/plan';
+var client = new OAuth('', '');
+var domain = '';
 
 
 var userInfo;
